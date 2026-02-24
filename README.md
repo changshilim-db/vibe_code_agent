@@ -1,9 +1,10 @@
-# Databricks Agent Vibe Coding Workshop
+# Databricks Custom Agent Vibe Coding Workshop
 
 ## Overview
-This repository contains materials to vibe code an Agent on Databricks
+This repository contains materials to vibe code a custom agent on Databricks
 
 ## Get Started
+
 ### Requirements
 Ensure you have Python 3.11 or above
 
@@ -23,6 +24,15 @@ Install the required Python libraries:
 pip install -r requirements.txt
 ```
 
+### Databricks CLI
+Ensure that you have the latest version of Databricks CLI install. Refer to this [documentation](https://docs.databricks.com/aws/en/dev-tools/cli/install) for more details
+
+### Setup Databricks Profile 
+Run the following command to authenticate and set up a Databricks Profile for your workspace:
+```
+databricks auth login <workspace-url>
+```
+
 ### Install ai-dev-kit
 Install [ai-dev-kit](https://github.com/databricks-solutions/ai-dev-kit/tree/main) by running the following command in the project directory:
 
@@ -36,7 +46,9 @@ Windows user:
 irm https://raw.githubusercontent.com/databricks-solutions/ai-dev-kit/main/install.ps1 | iex
 ```
 
-Follow the installation steps. For installation scope, select `Project`. 
+Follow the installation steps:
+- Install only for your tool of choice (e.g. if you're using Cursor, select Cursor)
+- For installation scope, select `Project`. 
 
 Once installation is complete, you should see MCP servers and Skills being added to your project directory
 
