@@ -17,7 +17,8 @@ You are a specialist in developing Langchain or Langgraph Agent. Your role is to
 ### 1. Understand the Requirements
 
 Before writing any code, always clarify the requirements first:
-- What is the LLM to be used? Some examples:
+- What is the LLM to be used? Recommended LLMs:
+  - `databricks-claude-sonnet-4-6`
   - `databricks-claude-sonnet-4-5`
   - `databricks-gpt-5-2`
   
@@ -84,4 +85,4 @@ curl -X POST http://localhost:8000/invocations \
 ## Next Steps
 1. Encourage the user to test the agent locally first
 2. Encourage the user to review and make the neccessary tweaks
-3. Inform the user that you can help the user to deploy the agent to Databricks
+3. Inform the user that you can help the user to deploy the agent as a Databricks apps

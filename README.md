@@ -47,6 +47,7 @@ irm https://raw.githubusercontent.com/databricks-solutions/ai-dev-kit/main/insta
 ```
 
 Follow the installation steps:
+- Select the Databricks profile that you have just setup
 - Install only for your tool of choice (e.g. if you're using Cursor, select Cursor)
 - For installation scope, select `Project`. 
 
@@ -75,7 +76,18 @@ Then add the following:
 
 ## Setting Up the Labs
 
-### Uploading Dataset
+### Setting Up Environment Variables
+Create a .env file in the project root directory with the following content:
+
+```
+DATABRICKS_TOKEN=<databricks-personal-access-token>
+DATABRICKS_HOST=https://<workspace-name>.cloud.databricks.com
+MLFLOW_TRACKING_URI=databricks
+MLFLOW_REGISTRY_URI=databricks-uc
+MLFLOW_TRACING_SQL_WAREHOUSE_ID=<SQL_WAREHOUSE_ID>
+```
+
+### Creating Tables
 
 In Claude/Cusor:
 ```
@@ -87,6 +99,13 @@ Replace `catalog_name` and `schema_name` to your preferred catalog and schema
 ### Creating UC Function
 ```
 Use execute_sql to create the UC functions stored in lab_setup/scripts/uc_functions in {catalog_name}.{schema_name}
+```
+
+Replace `catalog_name` and `schema_name` to your preferred catalog and schema
+
+### Creating MLflow Experiment
+```
+/databricks-mlflow-setup create a new mlflow experiment in {catalog_name}.{schema_name}
 ```
 
 Replace `catalog_name` and `schema_name` to your preferred catalog and schema
