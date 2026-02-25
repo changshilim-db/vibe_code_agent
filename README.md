@@ -1,113 +1,32 @@
-# Databricks Custom Agent Vibe Coding Workshop
+# Databricks Custom Agent Workshop
+
+This repository contains materials for building a custom LangChain agent on Databricks using AI-assisted coding tools.
 
 ## Overview
-This repository contains materials to vibe code a custom agent on Databricks
 
-## Get Started
+Learn how to leverage AI-assisted development tools to build a custom LangChain agent on the Databricks platform. This hands-on workshop guides you through the end to end lifecycle of a custom agent on Databricks
 
-### Requirements
-Ensure you have Python 3.11 or above
+## Learning Objectives
 
-Create a vitrual environment in the project directory:
+By the end of this workshop, participants will be able to:
 
-```
-python -m venv .venv
-```
+- Apply AI-assisted coding techniques effectively in their development workflow
+- Utilize Databricks tools for AI-assisted development
+- Understand the end-to-end process for developing and deploying custom agents on Databricks
 
-Activate the virtual environment:
-```
-source .venv/bin/activate
-```
+## Getting Started
 
-Install the required Python libraries:
-```
-pip install -r requirements.txt
-```
+- **[Setup Instructions](docs/setup_instructions.md)** - Configure your development environment and prerequisites
+- **[Lab Walkthrough](docs/lab_walkthrough.md)** - Step-by-step guide through the workshop exercises
 
-### Databricks CLI
-Ensure that you have the latest version of Databricks CLI install. Refer to this [documentation](https://docs.databricks.com/aws/en/dev-tools/cli/install) for more details
+## Tested AI Coding Tools
 
-### Setup Databricks Profile 
-Run the following command to authenticate and set up a Databricks Profile for your workspace:
-```
-databricks auth login <workspace-url>
-```
+This repository has been tested with the following AI-assisted coding tools:
 
-### Install ai-dev-kit
-Install [ai-dev-kit](https://github.com/databricks-solutions/ai-dev-kit/tree/main) by running the following command in the project directory:
+| Tool | Status |
+|------|--------|
+| Claude Code | ✓ Tested |
+| Cursor | ✗ Not tested |
+| GitHub Copilot | ✗ Not tested |
+| Codex | ✗ Not tested |
 
-Mac user:
-```
-bash <(curl -sL https://raw.githubusercontent.com/databricks-solutions/ai-dev-kit/main/install.sh)
-```
-
-Windows user:
-```
-irm https://raw.githubusercontent.com/databricks-solutions/ai-dev-kit/main/install.ps1 | iex
-```
-
-Follow the installation steps:
-- Select the Databricks profile that you have just setup
-- Install only for your tool of choice (e.g. if you're using Cursor, select Cursor)
-- For installation scope, select `Project`. 
-
-Once installation is complete, you should see MCP servers and Skills being added to your project directory
-
-### Add Langchain MCP Server
-
-Claude Code:
-```
-claude mcp add langchain-docs --transport http https://docs.langchain.com/mcp
-```
-
-Cursor:
-Navigate to: Cursor -> Settings -> Cursor Settings -> Tools & MCP -> New MCP Server. 
-
-Then add the following:
-```
-{
-    "Docs by LangChain": {
-        "name": "Docs by LangChain",
-        "url": "https://docs.langchain.com/mcp",
-        "headers": {}
-    }
-}
-```
-
-## Setting Up the Labs
-
-### Setting Up Environment Variables
-Create a `.env` file in the project root directory with the following content:
-
-```
-DATABRICKS_TOKEN=<databricks-personal-access-token>
-DATABRICKS_HOST=https://<workspace-name>.cloud.databricks.com
-MLFLOW_TRACKING_URI=databricks
-MLFLOW_REGISTRY_URI=databricks-uc
-MLFLOW_TRACING_SQL_WAREHOUSE_ID=<SQL_WAREHOUSE_ID>
-MLFLOW_TRACING_DESTINATION=<catalog.schema> # Replace with your schema
-```
-
-### Creating Tables
-
-In Claude/Cusor:
-```
-Use upload_to_volume to upload datasets from lab_setup/dataset to {catalog_name}.{schema_name} then use execute_sql to create a table for each of the dataset
-```
-
-Replace `catalog_name` and `schema_name` to your preferred catalog and schema
-
-### Creating UC Function
-```
-Use execute_sql to create the UC functions stored in lab_setup/scripts/uc_functions in {catalog_name}.{schema_name}
-```
-
-Replace `catalog_name` and `schema_name` to your preferred catalog and schema
-
-### Creating MLflow Experiment
-In Claude/Cursor:
-```
-/databricks-mlflow-setup create a new mlflow experiment in {catalog_name}.{schema_name}
-```
-
-Replace `catalog_name` and `schema_name` to your preferred catalog and schema
