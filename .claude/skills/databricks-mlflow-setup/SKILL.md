@@ -16,6 +16,7 @@ DATABRICKS_HOST=https://<workspace-name>.cloud.databricks.com
 MLFLOW_TRACKING_URI=databricks
 MLFLOW_REGISTRY_URI=databricks-uc
 MLFLOW_TRACING_SQL_WAREHOUSE_ID=<SQL_WAREHOUSE_ID>
+MLFLOW_TRACING_DESTINATION=<catalog.schema> # Replace with your schema
 ```
 
 ## Process
