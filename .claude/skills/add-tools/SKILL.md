@@ -52,6 +52,7 @@ See the `examples/` directory for complete YAML snippets:
 | File | Resource Type | When to Use |
 |------|--------------|-------------|
 | `uc-function.yaml` | Unity Catalog function | UC functions via MCP |
+| `uc-table.yaml` | Unity Catalog Table | UC table |
 | `uc-connection.yaml` | UC connection | External MCP servers |
 | `vector-search.yaml` | Vector search index | RAG applications |
 | `sql-warehouse.yaml` | SQL warehouse | SQL execution |

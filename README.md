@@ -77,7 +77,7 @@ Then add the following:
 ## Setting Up the Labs
 
 ### Setting Up Environment Variables
-Create a .env file in the project root directory with the following content:
+Create a `.env` file in the project root directory with the following content:
 
 ```
 DATABRICKS_TOKEN=<databricks-personal-access-token>
@@ -85,6 +85,7 @@ DATABRICKS_HOST=https://<workspace-name>.cloud.databricks.com
 MLFLOW_TRACKING_URI=databricks
 MLFLOW_REGISTRY_URI=databricks-uc
 MLFLOW_TRACING_SQL_WAREHOUSE_ID=<SQL_WAREHOUSE_ID>
+MLFLOW_TRACING_DESTINATION=<catalog.schema> # Replace with your schema
 ```
 
 ### Creating Tables
@@ -104,6 +105,7 @@ Use execute_sql to create the UC functions stored in lab_setup/scripts/uc_functi
 Replace `catalog_name` and `schema_name` to your preferred catalog and schema
 
 ### Creating MLflow Experiment
+In Claude/Cursor:
 ```
 /databricks-mlflow-setup create a new mlflow experiment in {catalog_name}.{schema_name}
 ```

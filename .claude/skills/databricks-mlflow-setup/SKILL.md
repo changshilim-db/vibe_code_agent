@@ -65,14 +65,6 @@ result = set_experiment_trace_location(
 print(result.full_otel_spans_table_name)
 ```
 
-### 2.0 Update .env file
-
-Add the experiment ID of the newly created experiment to .env file:
-
-```
-MLFLOW_EXPERIMENT_ID=<experiment-id>
-```
-
 ## Next Steps
 Ask the user to verify that the tables are created in their schema:
 - mlflow_experiment_trace_otel_logs

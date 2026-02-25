@@ -13,7 +13,7 @@ from databricks.sdk import WorkspaceClient
 from databricks_langchain import ChatDatabricks, DatabricksMCPServer, DatabricksMultiServerMCPClient
 from langchain.agents import create_agent
 
-# Enable autologging for tracing
+# Add at the beginning of the scrip to enable autologging for tracing
 mlflow.langchain.autolog()
 
 # Initialize workspace client
@@ -38,9 +38,7 @@ Connects to Databricks Model Serving endpoints for LLM inference.
 from databricks_langchain import ChatDatabricks
 
 llm = ChatDatabricks(
-    endpoint="databricks-claude-3-7-sonnet",  # or databricks-meta-llama-3-1-70b-instruct
-    temperature=0,
-    max_tokens=500,
+    endpoint="databricks-claude-4-5-sonnet"
 )
 
 # For Responses API agents:
