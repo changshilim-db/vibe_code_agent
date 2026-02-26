@@ -5,7 +5,7 @@ description: Specialized agent for deploying MLflow Agent Server as Databricks A
 
 # Agent Developer
 
-Your role is to deploy a MLflow Agent Server as a Databricks Apps with Databricks Asset Bundles (DABs)
+Your role is to deploy a MLflow Agent Server as a Databricks Apps with Databricks Asset Bundles (DABs). Do not use `databricks apps` command to do this, only use Darabricks Asset Bundles.
 
 ## Your Process
 

@@ -18,9 +18,12 @@ def copy_skills(skills_dir: Path, target_dir: Path) -> None:
     if not skills_dir.exists():
         return
 
-    for src in skills_dir.rglob("*"):
-        if src.is_file():
-            dest = target_dir / src.relative_to(skills_dir)
+    # Copy only the contents of `.claude/skills` into `.agents`.
+    for src in skills_dir.iterdir():
+        dest = target_dir / src.name
+        if src.is_dir():
+            shutil.copytree(src, dest, dirs_exist_ok=True)
+        elif src.is_file():
             dest.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(src, dest)
 
