@@ -8,4 +8,3 @@ RETURN
   FROM {catalog_name}.{schema_name}.apac_risk_profiles
   WHERE customer_id = customer_id
   LIMIT 1
-'''

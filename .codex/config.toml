@@ -1,0 +1,3 @@
+[mcp_servers.langchain_docs]
+url = "https://docs.langchain.com/mcp"
+http_headers = {}

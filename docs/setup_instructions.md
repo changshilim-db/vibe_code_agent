@@ -19,6 +19,13 @@ Install the required Python libraries:
 pip install -r requirements.txt
 ```
 
+### For Codex Only
+Run the following script to copy files over to `.agents` folder
+
+```bash
+python lab_setup/scripts/initialization/setup_codex.py
+```
+
 ### Databricks CLI
 Ensure that you have the latest version of Databricks CLI install. Refer to this [documentation](https://docs.databricks.com/aws/en/dev-tools/cli/install) for more details
 
@@ -85,7 +92,7 @@ MLFLOW_TRACING_DESTINATION=<catalog.schema> # Replace with your schema
 
 ### Creating Tables
 
-In Claude/Cusor:
+In Claude/Cusor/Codex:
 ```
 Use upload_to_volume to upload datasets from lab_setup/dataset to {catalog_name}.{schema_name} then use execute_sql to create a table for each of the dataset
 ```
@@ -93,6 +100,7 @@ Use upload_to_volume to upload datasets from lab_setup/dataset to {catalog_name}
 Replace `catalog_name` and `schema_name` to your preferred catalog and schema
 
 ### Creating UC Function
+In Claude/Cusor/Codex:
 ```
 Use execute_sql to create the UC functions stored in lab_setup/scripts/uc_functions in {catalog_name}.{schema_name}
 ```
@@ -100,9 +108,11 @@ Use execute_sql to create the UC functions stored in lab_setup/scripts/uc_functi
 Replace `catalog_name` and `schema_name` to your preferred catalog and schema
 
 ### Creating MLflow Experiment
-In Claude/Cursor:
+Before running the prompt below, ensure that the [OpenTelemetry on Databricks preview feature](https://docs.databricks.com/aws/en/mlflow3/genai/tracing/trace-unity-catalog) is enabled in the workspace. 
+
+In Claude/Cusor/Codex:
 ```
-/databricks-mlflow-setup create a new mlflow experiment wtih traces to be stored in {catalog_name}.{schema_name}
+Use databricks-mlflow-setup to create a new mlflow experiment wtih traces to be stored in {catalog_name}.{schema_name}
 ```
 
 Replace `catalog_name` and `schema_name` to your preferred catalog and schema

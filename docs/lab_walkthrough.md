@@ -8,7 +8,7 @@ Helper prompt:
 Use agent-developer to help me create a LangChain agent.
 ```
 
-The subagent will ask a few follow-up questions (for example, which LLM and which tools to use).
+The subagent may ask a few follow-up questions (for example, which LLM and which tools to use).
 
 Helper prompt:
 ```
@@ -58,7 +58,7 @@ After deployment, monitor performance using the agent-trace-analyzer to analyze 
 
 Helper prompt:
 ```
-/agent-trace-analyzer help me monitor the agent’s performance with a dashboard. The agent traces are stored in <catalog_name>.<schema_name>
+Use agent-trace-analyzer to help monitor the agent’s performance with a dashboard. The agent traces are stored in <catalog_name>.<schema_name>
 ```
 
 By the end of this step, confirm that:
