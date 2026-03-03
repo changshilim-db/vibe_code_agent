@@ -26,7 +26,7 @@ This repository has been tested with the following AI-assisted coding tools:
 | Tool | Status |
 |------|--------|
 | Claude Code | ✓ Tested |
-| Cursor | ✗ Not tested |
+| Cursor | ✓ Tested |
 | GitHub Copilot | ✗ Not tested |
 | Codex | ✓ Tested |
 

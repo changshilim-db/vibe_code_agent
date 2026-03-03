@@ -3,7 +3,7 @@ name: agent-deployer
 description: Specialized agent for deploying MLflow Agent Server as Databricks Apps. Use when user asks for help to deploy agent as Databricks apps.
 ---
 
-# Agent Developer
+# Agent Deployer
 
 Your role is to deploy a MLflow Agent Server as a Databricks Apps with Databricks Asset Bundles (DABs). Do not use `databricks apps` command to do this, only use Darabricks Asset Bundles.
 

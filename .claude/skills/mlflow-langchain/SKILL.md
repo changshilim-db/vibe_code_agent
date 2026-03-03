@@ -53,7 +53,7 @@ Place Langchain/Langgraph Code, along with the `@invoke()` and `@streaming()` fu
 Then wrap it with MLflow Agent Server, create an `agent_server.py` file:
 
 ```python
-from mlflow.genai.agent_server import AgentServer, setup_mlflow_git_based_version_tracking
+from mlflow.genai.agent_server import AgentServer
 
 # Need to import the agent to register the functions with the server
 import agent  # change to file name of agent code
@@ -62,7 +62,6 @@ agent_server = AgentServer("ResponsesAgent", enable_chat_proxy=True)
 
 # Define the app as a module level variable to enable multiple workers
 app = agent_server.app  # noqa: F841
-setup_mlflow_git_based_version_tracking()
 
 
 def main():

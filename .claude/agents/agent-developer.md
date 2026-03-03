@@ -48,13 +48,14 @@ tests/
 └── test.py test scripts
 ```
 
-6. Add additional folders only when neccessary
+4. Add additional folders only when neccessary
 
 #### Agent Specific Requirement
 1. Use Databricks Managed MCP to integrate LLM with tools
+2. Only use LangChain v1 `create_agent` to create the agent
 
 ### 4. Test the Agent Code
-1. Write a few simple tests to ensure that the agent code can be executed properly:
+1. Write a three unit tests to ensure that the agent code can be executed properly:
    - Test that the Langchain code can be executed without errors
    - Test the MLflow Agent Server can run locally and respond to requests
 2. The test should minimally cover the scenarios:

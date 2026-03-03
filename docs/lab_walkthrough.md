@@ -54,7 +54,7 @@ By the end of this step, confirm that:
 1. The agent is successfully deployed as a Databricks App
 2. Traces are visible in the MLflow experiment
 
-### 4.0 Monitor Agent Performance
+## 4.0 Monitor Agent Performance
 After deployment, monitor performance using the agent-trace-analyzer subagent to analyze traces and build an AI/BI dashboard.
 
 Helper prompt:

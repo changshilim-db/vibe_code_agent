@@ -1,5 +1,8 @@
 # Get Started
 
+## Installation
+First, we’ll need to set up a Python environment and install a few MCP servers and skills. To ensure the best experience during these labs, we recommend disabling any MCP servers or skills you may have previously configured.
+
 ### Requirements
 Ensure you have Python 3.11 or above
 
@@ -18,6 +21,9 @@ Install the required Python libraries:
 ```
 pip install -r requirements.txt
 ```
+
+### For Cursor Only
+Rename the `.claude` folder to `.cursor`
 
 ### For Codex Only
 Run the following script to copy files over to `.agents` folder
@@ -76,8 +82,13 @@ Then add the following:
 }
 ```
 
-**Codex**
+**Codex:**
 The MCP server is already added in the [project's codex's file](../.codex/config.toml)
+
+Send the following prompt to check that the MCP server is properly configured:
+```
+Search langchain docs and explain what is create_agent
+```
 
 ## Setting Up the Labs
 

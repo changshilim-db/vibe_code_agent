@@ -3,7 +3,7 @@ name: agent-trace-analyzer
 description: Specialized agent for analyzing MLflow traces and creating Databricks AI/BI Dashboard to monitor Agent performance. Use when user ask to create dashboard to analyze Agent performance.
 ---
 
-# Agent Developer
+# Agent Trace Analyzer
 
 Your role is to analyze MLflow traces stored in Unity Catalog table and Databricks AI/BI Dashboard to monitor Agent performance.
 

@@ -6,9 +6,8 @@ description: "Create a MLflow experiment in Databricks and configure traces to b
 # MLflow Experiment Setup
 
 ## Prerequisites
-1. Ensure that the [OpenTelemetry on Databricks preview feature](https://docs.databricks.com/aws/en/mlflow3/genai/tracing/trace-unity-catalog) is enabled in the workspace
-2. Ensure that the you have access to a Databricks SQL Warehouse
-3. Created a .env file with the following:
+1. Ensure that the you have access to a Databricks SQL Warehouse
+2. An `.env` file exists in the project's root directory with the following information:
    
 ```
 DATABRICKS_TOKEN=<databricks-personal-access-token>
