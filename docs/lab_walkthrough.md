@@ -7,6 +7,7 @@ Helper prompt:
 ```text
 Use agent-developer to help me create a LangChain agent.
 ```
+**Note: For Cursor, you may need to manually invoke the sub-agent**
 
 The subagent may ask a few follow-up questions (for example, which LLM and which tools to use).
 
@@ -29,7 +30,7 @@ Once the agent code is complete, run local tests to confirm everything works end
 
 Helper prompt:
 ```
-Please test the agent code and the MLflow Agent Server locally.
+Please run the Pytests you’ve written, then verify that the MLflow Agent Server starts locally and responds to queries.
 ```
 
 The coding assistant should run the tests, fix issues as needed, start the MLflow Agent Server on localhost, and send a few sample requests.
@@ -54,7 +55,7 @@ By the end of this step, confirm that:
 2. Traces are visible in the MLflow experiment
 
 ### 4.0 Monitor Agent Performance
-After deployment, monitor performance using the agent-trace-analyzer to analyze traces and build an AI/BI dashboard.
+After deployment, monitor performance using the agent-trace-analyzer subagent to analyze traces and build an AI/BI dashboard.
 
 Helper prompt:
 ```

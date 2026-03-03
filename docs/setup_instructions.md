@@ -57,12 +57,12 @@ Once installation is complete, you should see MCP servers and Skills being added
 
 ### Add Langchain MCP Server
 
-Claude Code:
+**Claude Code:**
 ```
 claude mcp add langchain-docs --transport http https://docs.langchain.com/mcp
 ```
 
-Cursor:
+**Cursor:**
 Navigate to: Cursor -> Settings -> Cursor Settings -> Tools & MCP -> New MCP Server. 
 
 Then add the following:
@@ -75,6 +75,9 @@ Then add the following:
     }
 }
 ```
+
+**Codex**
+The MCP server is already added in the [project's codex's file](../.codex/config.toml)
 
 ## Setting Up the Labs
 
