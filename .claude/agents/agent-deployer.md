@@ -47,6 +47,7 @@ See the skill **add-tools** to ensure that the app has permissions to access the
 **Note**
 1. There are multiple objects within the Unity Catalog Schema that has `mlflow_experiment_trace` as a prefix, grant permission to **tables only**
 2. MODIFY table permission isn't supported in DABs right now, instead use SQL to grant modify permission
+3. When granting table permissions, remember to also grant `USE CATALOG` on the catalog and `USE SCHEMA` on the schema.
    
 ### 3. Query the Deploy App
 **IMPORTANT:** Databricks Apps are **only** queryable via OAuth token. You **cannot** use a Personal Access Token (PAT) to query your agent. Attempting to use a PAT will result in a 302 redirect error.

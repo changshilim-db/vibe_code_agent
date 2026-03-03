@@ -22,26 +22,30 @@ Install the required Python libraries:
 pip install -r requirements.txt
 ```
 
-### For Cursor Only
+#### For Cursor Only
 Rename the `.claude` folder to `.cursor`
 
-### For Codex Only
+#### For Codex Only
 Run the following script to copy files over to `.agents` folder
 
 ```bash
 python lab_setup/scripts/initialization/setup_codex.py
 ```
 
-### Databricks CLI
+### Setup Databricks Locally
+
+#### Databricks CLI
 Ensure that you have the latest version of Databricks CLI install. Refer to this [documentation](https://docs.databricks.com/aws/en/dev-tools/cli/install) for more details
 
-### Setup Databricks Profile 
+#### Setup Databricks Profile 
 Run the following command to authenticate and set up a Databricks Profile for your workspace:
 ```
 databricks auth login <workspace-url>
 ```
 
-### Install ai-dev-kit
+### Installing AI Tool Kits
+
+#### Install ai-dev-kit
 Install [ai-dev-kit](https://github.com/databricks-solutions/ai-dev-kit/tree/main) by running the following command in the project directory:
 
 Mac user:
@@ -61,7 +65,7 @@ Follow the installation steps:
 
 Once installation is complete, you should see MCP servers and Skills being added to your project directory
 
-### Add Langchain MCP Server
+#### Add Langchain MCP Server
 
 **Claude Code:**
 ```

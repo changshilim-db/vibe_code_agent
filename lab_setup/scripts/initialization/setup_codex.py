@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Create .agents from .claude skills and agents."""
+"""Create .agents/skills from .claude skills and agents."""
 
 from __future__ import annotations
 
@@ -18,7 +18,7 @@ def copy_skills(skills_dir: Path, target_dir: Path) -> None:
     if not skills_dir.exists():
         return
 
-    # Copy only the contents of `.claude/skills` into `.agents`.
+    # Copy only the contents of `.claude/skills` into `.agents/skills`.
     for src in skills_dir.iterdir():
         dest = target_dir / src.name
         if src.is_dir():
@@ -47,7 +47,7 @@ def main() -> None:
 
     skills_dir = root / ".claude" / "skills"
     agents_dir = root / ".claude" / "agents"
-    target_dir = root / ".agents"
+    target_dir = root / ".agents" / "skills"
     claude_md = root / "CLAUDE.md"
     agents_md = root / "AGENTS.md"
 

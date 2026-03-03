@@ -6,17 +6,12 @@ Create a LangChain agent integrated with MLflow. Use the `agent-developer` subag
 Helper prompt:
 ```text
 Use agent-developer to help me create a LangChain agent.
-```
-**Note: For Cursor, you may need to manually invoke the sub-agent**
 
-The subagent may ask a few follow-up questions (for example, which LLM and which tools to use).
-
-Helper prompt:
-```
 For the LLM, use databricks-claude-sonnet-4-5. The agent must integrate with UC functions in <catalog_name>.<schema_name>.
 
 The agent needs to answer questions about banking customers.
 ```
+**Note: For Cursor, you may need to manually invoke the sub-agent**
 
 The subagent will reference LangChain, Databricks, and MLflow documentation to implement the agent. By the end of this step, the coding assistant should have:
 1. Created a LangChain agent
