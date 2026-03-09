@@ -26,7 +26,7 @@ workspace_client = WorkspaceClient()
 
 **SDK Location:** https://github.com/databricks/databricks-ai-bridge/tree/main/integrations/langchain
 
-Before making any changes, ensure that the APIs actually exist in the SDK. If something is missing from the documentation here, look in the venv's `site-packages` directory for the `databricks_langchain` package. If it's not installed, run `uv sync` to create the .venv and install the package.
+Before making any changes, ensure that the APIs actually exist in the SDK. If something is missing from the documentation here, look in the venv's `site-packages` directory for the `databricks_langchain` package.
 
 ---
 

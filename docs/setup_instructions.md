@@ -22,15 +22,22 @@ Install the required Python libraries:
 pip install -r requirements.txt
 ```
 
-#### For Cursor Only
-Rename the `.claude` folder to `.cursor`
+<details>
+<summary>For Cursor Only</summary>
 
-#### For Codex Only
-Run the following script to copy files over to `.agents` folder
+Rename the `.claude` folder to `.cursor`.
+
+</details>
+
+<details>
+<summary>For Codex Only</summary>
+
+Run the following script to copy files over to `.agents` folder:
 
 ```bash
 python lab_setup/scripts/initialization/setup_codex.py
-```
+ ```
+</details>
 
 ### Setup Databricks Locally
 
@@ -48,15 +55,19 @@ databricks auth login <workspace-url>
 #### Install ai-dev-kit
 Install [ai-dev-kit](https://github.com/databricks-solutions/ai-dev-kit/tree/main) by running the following command in the project directory:
 
-Mac user:
+<details>
+<summary>Mac user:</summary>
 ```
 bash <(curl -sL https://raw.githubusercontent.com/databricks-solutions/ai-dev-kit/main/install.sh)
 ```
+</details>
 
-Windows user:
+<details>
+<summary>Windows user:</summary>
 ```
 irm https://raw.githubusercontent.com/databricks-solutions/ai-dev-kit/main/install.ps1 | iex
 ```
+</details>
 
 Follow the installation steps:
 - Select the Databricks profile that you have just setup
@@ -67,12 +78,15 @@ Once installation is complete, you should see MCP servers and Skills being added
 
 #### Add Langchain MCP Server
 
-**Claude Code:**
+<details>
+<summary>Claude Code:</summary>
 ```
 claude mcp add langchain-docs --transport http https://docs.langchain.com/mcp
 ```
+</details>
 
-**Cursor:**
+<details>
+<summary>Cursor:</summary>
 Navigate to: Cursor -> Settings -> Cursor Settings -> Tools & MCP -> New MCP Server. 
 
 Then add the following:
@@ -85,16 +99,21 @@ Then add the following:
     }
 }
 ```
+</details>
 
-**Codex:**
+<details>
+<summary>Codex:</summary>
 The MCP server is already added in the [project's codex's file](../.codex/config.toml)
 
 Send the following prompt to check that the MCP server is properly configured:
 ```
 Search langchain docs and explain what is create_agent
 ```
+</details>
 
 ## Setting Up the Labs
+
+**Note: Before proceeding, you may need to restart your IDE or Claude Code session so the installed skills and MCP servers are detected**
 
 ### Setting Up Environment Variables
 Create a `.env` file in the project root directory with the following content:

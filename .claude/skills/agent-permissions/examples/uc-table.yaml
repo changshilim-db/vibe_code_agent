@@ -1,0 +1,7 @@
+# Unity Catalog Table
+
+- name: 'my_uc_table'
+  uc_securable:
+    securable_full_name: 'catalog.schema.table_name'
+    securable_type: 'TABLE'
+    permission: 'SELECT'

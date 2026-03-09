@@ -12,7 +12,7 @@ The purpose of this repo is to build and deploy a custom Langchain agent on Data
 - Use `pytest` as the framework for code testing
 
 ## Rules
-- Do not create any .env file, instead ask the user to create it manually
+- Do not create any .env file, instead ask the user to create it manually if it is not present
 - A `.env` file is available at the project's root folder. Ensure that you load these environment variables for any scripts you write 
 - Always read any relevant documentation first before writing any code
 - Only use Langchain version 1.0.0 and above, never use any older versions of Langchain

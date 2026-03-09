@@ -66,7 +66,8 @@ print(result.full_otel_spans_table_name)
 ```
 
 ## Next Steps
-Ask the user to verify that the tables are created in their schema:
-- mlflow_experiment_trace_otel_logs
-- mlflow_experiment_trace_otel_metrics
-- mlflow_experiment_trace_otel_spans
+1. Ask the user to verify that the tables are created in their schema:
+    - mlflow_experiment_trace_otel_logs
+    - mlflow_experiment_trace_otel_metrics
+    - mlflow_experiment_trace_otel_spans
+2. Provide user with the name of the MLflow experiment that is created
