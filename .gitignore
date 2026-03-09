@@ -156,3 +156,4 @@ mlflow.db
 .ai-dev-kit
 .venv
 .mcp.json
+.agents

@@ -1,5 +1,15 @@
 # Walkthrough
 
+Before proceeding, ensure that you have completed the setup. Ensure that `.env` file has the structure below:
+
+```
+DATABRICKS_TOKEN=<databricks-personal-access-token>
+DATABRICKS_HOST=https://<workspace-name>.cloud.databricks.com
+MLFLOW_TRACKING_URI=databricks
+MLFLOW_REGISTRY_URI=databricks-uc
+MLFLOW_EXPERIMENT_ID=<MLFLOW EXPERIMENT ID>
+```
+
 ## 1.0 Develop a LangChain Agent Locally
 Create a LangChain agent integrated with MLflow. Use the `agent-developer` subagent to help us with this.
 

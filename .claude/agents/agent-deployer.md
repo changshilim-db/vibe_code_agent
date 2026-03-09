@@ -36,8 +36,8 @@ env:
     value: "databricks-uc"
   - name: API_PROXY
     value: "http://localhost:8000/invocations"
-  - name: MLFLOW_TRACING_DESTINATION
-    value: <catalog_name>.<schema_name>
+  - name: MLFLOW_EXPERIMENT_ID
+    value: <MLFLOW EXPERIMENT ID>
 
 ```
 
