@@ -44,9 +44,15 @@ env:
 4. Ensure that you are able to extract the app's URL after deployment is completed
 
 #### Databricks Apps Permissions
+
 See the skill **agent-permissions** to ensure that the app has permissions to access the required resouces:
 
 1. CAN_EDIT permission for MLflow Experiment
+2. Grant EXECUTE permissions for these UC functions:
+  - check_credit_risk
+  - check_propensity
+3. Grant `USE CATALOG` on the catalog of the UC functions
+4. Grant `USE SCHEMA` on the schema of the UC functions
 
 ### 3. Prepare Deployment Script
 1. Create the DABs bundle to deploy the required resources and bundles
