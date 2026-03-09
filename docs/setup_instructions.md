@@ -24,6 +24,8 @@ Install the required Python libraries:
 pip install -r requirements.txt
 ```
 
+### Additional Scripts to Run
+
 <details>
 <summary>For Cursor Only</summary>
 

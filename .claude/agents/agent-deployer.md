@@ -45,20 +45,25 @@ env:
 
 #### Databricks Apps Permissions
 See the skill **agent-permissions** to ensure that the app has permissions to access the required resouces:
-1. For a given Unity Catalog Schema, grant READ and MODIFY permissions for **tables** with `mlflow_experiment_trace` prefix
-2. Review the agent code to identify the tools used by the agent. Grant permission to the resources used by the tools
+
+1. Grant READ and MODIFY permissions for these **tables**:
+  - mlflow_experiment_trace_otel_logs
+  - mlflow_experiment_trace_otel_metrics
+  - mlflow_experiment_trace_otel_spans
+2. Grant EXECUTE permissions for these UC functions:
+  - check_credit_risk
+  - check_propensity
 
 **Note**
-1. There are multiple objects within the Unity Catalog Schema that has `mlflow_experiment_trace` as a prefix, grant permission to **tables only**
-2. MODIFY table permission isn't supported in DABs right now, instead use SQL to grant modify permission
-3. When granting table permissions, remember to also grant `USE CATALOG` on the catalog and `USE SCHEMA` on the schema.
+1. For permissions that can't be configured through DABs, write python script that uses Databricks SDK to grant the permission
+2. When granting UC permissions, remember to also grant `USE CATALOG` on the catalog and `USE SCHEMA` on the schema.
 
 ### 3. Prepare Deployment Script
 1. Create the DABs bundle to deploy the required resources and bundles
 2. Create a deploy.sh script with commands to:
   1. Validate DABs bundle
   2. Deploy the DABs bundle
-  3. Grant permissions to additional resources not supported by DABs
+  3. Execute scripts to grant permissions to additional resources not supported by DABs
 
 ### 4. Deploy the App
 1. Execute the deploy.sh script to deploy the app
