@@ -171,7 +171,7 @@ Before running the prompt below, ensure that the [OpenTelemetry on Databricks pr
 In Claude/Cusor/Codex:
 
 ```
-Use databricks-mlflow-setup to create a new mlflow experiment wtih traces to be stored in {catalog_name}.{schema_name}
+Use databricks-mlflow-setup to create a new mlflow experiment
 ```
 
 Replace `catalog_name` and `schema_name` to your preferred catalog and schema

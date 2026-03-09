@@ -54,7 +54,7 @@ After deployment, monitor performance using the agent-trace-analyzer subagent to
 
 Helper prompt:
 ```
-Use agent-trace-analyzer to help monitor the agent’s performance with a dashboard. The agent traces are stored in <catalog_name>.<schema_name>
+Use agent-trace-analyzer to help monitor the agent’s performance with a dashboard. Extract traces from MLflow Experiment ID <MLFLOW EXPERIMENT ID> and store them in <catalog_name>.<schema_name>
 ```
 
 By the end of this step, confirm that:

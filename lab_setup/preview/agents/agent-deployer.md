@@ -46,7 +46,17 @@ env:
 #### Databricks Apps Permissions
 See the skill **agent-permissions** to ensure that the app has permissions to access the required resouces:
 
-1. CAN_EDIT permission for MLflow Experiment
+1. Grant READ and MODIFY permissions for these **tables**:
+  - mlflow_experiment_trace_otel_logs
+  - mlflow_experiment_trace_otel_metrics
+  - mlflow_experiment_trace_otel_spans
+2. Grant EXECUTE permissions for these UC functions:
+  - check_credit_risk
+  - check_propensity
+
+**Note**
+1. For permissions that can't be configured through DABs, write python script that uses Databricks SDK to grant the permission
+2. When granting UC permissions, remember to also grant `USE CATALOG` on the catalog and `USE SCHEMA` on the schema.
 
 ### 3. Prepare Deployment Script
 1. Create the DABs bundle to deploy the required resources and bundles
