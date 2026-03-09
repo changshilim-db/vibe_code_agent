@@ -142,6 +142,8 @@ MLFLOW_TRACING_SQL_WAREHOUSE_ID=<SQL_WAREHOUSE_ID>
 MLFLOW_TRACING_DESTINATION=<catalog.schema> # Replace with your schema
 ```
 
+Refer to this documentation on how to [create a personal access token](https://docs.databricks.com/aws/en/dev-tools/auth/pat#create-personal-access-tokens-for-workspace-users)
+
 ### Creating Tables
 
 In Claude/Cusor/Codex:
