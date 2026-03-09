@@ -45,7 +45,7 @@ env:
 
 #### Databricks Apps Permissions
 
-See the skill **agent-permissions** to ensure that the app has permissions to access the required resouces:
+See the **agent-permissions** skill for the DABs syntax used to grant the app’s service principal the permissions required to access the necessary resources. Here are the list of resources:
 
 1. CAN_EDIT permission for MLflow Experiment
 2. Grant EXECUTE permissions for these UC functions:
@@ -53,6 +53,9 @@ See the skill **agent-permissions** to ensure that the app has permissions to ac
   - check_propensity
 3. Grant `USE CATALOG` on the catalog of the UC functions
 4. Grant `USE SCHEMA` on the schema of the UC functions
+
+**Notes**
+1. For permissions that can't be configured through DABs, write python script that uses Databricks SDK to grant the permission
 
 ### 3. Prepare Deployment Script
 1. Create the DABs bundle to deploy the required resources and bundles

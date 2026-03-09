@@ -50,7 +50,7 @@ After the MLflow Agent Server works locally, deploy it as a Databricks App using
 
 Helper prompt:
 ```
-Use agent-deployer to help deploy the agent as a Databricks App.
+Use agent-deployer to help deploy the agent as a Databricks App. The app will need edit access to MLflow experiment ID: <MLFLOW EXPERIMENT ID> and execute permissions for uc functions in <catalog_name>.<schema_name>****
 ```
 
 The `agent-deployer` subagent will use Databricks Asset Bundles (DABs) to package and deploy the app. After deployment, the coding assistant should query the app endpoint with a few requests.
