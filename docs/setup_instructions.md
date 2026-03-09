@@ -96,6 +96,7 @@ claude mcp add langchain-docs --transport http https://docs.langchain.com/mcp
 
 <details>
 <summary>Cursor:</summary>
+
 Navigate to: Cursor -> Settings -> Cursor Settings -> Tools & MCP -> New MCP Server. 
 
 Then add the following:
@@ -114,6 +115,7 @@ Then add the following:
 
 <details>
 <summary>Codex:</summary>
+
 The MCP server is already added in the [project's codex's file](../.codex/config.toml)
 
 Send the following prompt to check that the MCP server is properly configured:
