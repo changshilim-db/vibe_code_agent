@@ -30,7 +30,7 @@ async def streaming(request: ResponsesAgentRequest) -> AsyncGenerator[ResponsesA
         yield event
 ```
 
-See [examples/utils.py](examples/utils.py) on how to implement `process_agent_astream_events`
+Use `process_agent_astream_events` in [examples/utils.py](examples/utils.py) to convert LangChain outputs to ResposnesAgent outputs
 
 #### Non-Streaming
 

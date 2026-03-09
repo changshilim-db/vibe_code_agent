@@ -61,7 +61,7 @@ tests/
    - Test the MLflow Agent Server can run locally and respond to requests
 2. The test should minimally cover the scenarios:
    - Ensure that the test will trigger at least one of the agent tools
-   - Ensure that streaming and non-streaming responses will work
+   - Ensure that streaming and non-streaming responses gives an output
 3. Here is how you can test the agent locally
 
 ```python
