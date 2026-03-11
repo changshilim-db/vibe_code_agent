@@ -171,5 +171,3 @@ In Claude/Cusor/Codex:
 ```
 Use databricks-mlflow-setup to create a new mlflow experiment
 ```
-
-Replace `catalog_name` and `schema_name` to your preferred catalog and schema

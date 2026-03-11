@@ -34,6 +34,7 @@ Before writing any code, always clarify the requirements first:
 
 #### General Requirement
 1. In agent.py, always load environment variables from `.env` file located in the root directory of the project using `load_dotenv()`
+2. In agent.py, always enable mlflow autologging with `mlflow.langchain.autolog()`
 2. Ensure that the code is well organized
 2. Keep docstring or code documentation no more than two lines
 3. Write your code in accordance to this minimally project structure:
